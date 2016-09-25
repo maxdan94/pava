@@ -37,7 +37,6 @@ isoreg *pava(double *vect,unsigned n){
 	unsigned *nag=malloc(n*sizeof(unsigned));
 	double *val=malloc(n*sizeof(double));
 	unsigned i,j;
-
 	nag[0]=1;
 	val[0]=vect[0];
 	j=0;
@@ -70,7 +69,6 @@ double* readvalues(char* input,unsigned *n){
 	}
 	fclose(file);
 	*n=i;
-	printf("%u\n",*n);
 	vect=realloc(vect,(*n)*sizeof(double));
 	return vect;
 }
@@ -95,9 +93,9 @@ int main(int argc,char** argv){
 	double *vect;
 	unsigned n;
 	isoreg* fit;
-
 	printf("Reading values from file %s\n",argv[1]);
 	vect=readvalues(argv[1],&n);
+	printf("%u values read\n",n);
 	printf("Doing Isotonic regression with the PAV algorithm\n");
 	fit=pava(vect,n);
 	printf("Printing result in file %s\n",argv[2]);
