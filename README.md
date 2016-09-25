@@ -3,7 +3,7 @@
 ##Info##
 
 This is an implementation of the Pool Adjacent Violators Algorithm (PAV algorithm or PAVA) for isotonic regression 
-(with all intial weights equal to one) such as detail here:  
+(with all intial weights equal to one) such as detailed here:  
 http://stat.wikia.com/wiki/Isotonic_regression  
 https://en.wikipedia.org/wiki/Isotonic_regression
 
